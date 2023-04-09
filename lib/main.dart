@@ -9,9 +9,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Column(
+            children: const [
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/baddo_smart.png'),
+                ),
+              Text('BADDO SMART'),
+            ],
+          ),
+        ),
       ),
     );
   }
